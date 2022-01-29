@@ -1,0 +1,67 @@
+# Project: ProjectCpp
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o User.o Entity.o Material.o Service.o RequestDonation.o RequestDonationList.o Admin.o Requests.o Beneficiary.o Donator.o Offers.o Organization.o Menu.o
+LINKOBJ  = main.o User.o Entity.o Material.o Service.o RequestDonation.o RequestDonationList.o Admin.o Requests.o Beneficiary.o Donator.o Offers.o Organization.o Menu.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = ProjectCpp.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\DevCpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+User.o: User.cpp
+	$(CPP) -c User.cpp -o User.o $(CXXFLAGS)
+
+Entity.o: Entity.cpp
+	$(CPP) -c Entity.cpp -o Entity.o $(CXXFLAGS)
+
+Material.o: Material.cpp
+	$(CPP) -c Material.cpp -o Material.o $(CXXFLAGS)
+
+Service.o: Service.cpp
+	$(CPP) -c Service.cpp -o Service.o $(CXXFLAGS)
+
+RequestDonation.o: RequestDonation.cpp
+	$(CPP) -c RequestDonation.cpp -o RequestDonation.o $(CXXFLAGS)
+
+RequestDonationList.o: RequestDonationList.cpp
+	$(CPP) -c RequestDonationList.cpp -o RequestDonationList.o $(CXXFLAGS)
+
+Admin.o: Admin.cpp
+	$(CPP) -c Admin.cpp -o Admin.o $(CXXFLAGS)
+
+Requests.o: Requests.cpp
+	$(CPP) -c Requests.cpp -o Requests.o $(CXXFLAGS)
+
+Beneficiary.o: Beneficiary.cpp
+	$(CPP) -c Beneficiary.cpp -o Beneficiary.o $(CXXFLAGS)
+
+Donator.o: Donator.cpp
+	$(CPP) -c Donator.cpp -o Donator.o $(CXXFLAGS)
+
+Offers.o: Offers.cpp
+	$(CPP) -c Offers.cpp -o Offers.o $(CXXFLAGS)
+
+Organization.o: Organization.cpp
+	$(CPP) -c Organization.cpp -o Organization.o $(CXXFLAGS)
+
+Menu.o: Menu.cpp
+	$(CPP) -c Menu.cpp -o Menu.o $(CXXFLAGS)
